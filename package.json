@@ -1,6 +1,6 @@
 {
   "name": "discord-bot",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "a cheekly lil robot",
   "main": "src/index.js",
   "repository": "git@github.com:dmackca/discord-bot.git",
