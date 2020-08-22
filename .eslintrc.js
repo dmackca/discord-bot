@@ -3,5 +3,6 @@ module.exports = {
         'foundryspatial',
     ],
     rules: {
+        'no-console': 'off',
     },
 };
