@@ -32,6 +32,9 @@ bot.on('shardDisconnect', async (err, id) => {
 
 // When a message is created
 bot.on('messageCreate', async (msg) => {
+    // don't respond to other bots
+    if (msg.author.bot) return;
+
     // frinkiac queries
     if (msg.content.startsWith('.frink ')) {
         const frinkiacQuery = msg.content.substring(7);
