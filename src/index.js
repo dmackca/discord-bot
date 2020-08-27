@@ -3,32 +3,11 @@ const Eris = require('eris');
 
 const bot = new Eris(process.env.BOT_TOKEN);
 
-const DEBUG_CHANNEL_ID = '746568285323133001';
-
-function sendErrorMessage() {
-    return bot.createMessage(DEBUG_CHANNEL_ID, '<@246852441696370689> go check the error log!');
-}
-
 // When the bot is ready
-bot.on('ready', () => {
-    console.log('Ready!');
-});
+bot.on('ready', () => { console.log('Ready!'); });
 
 // handle error-ish events
-bot.on('disconnect', async (msg) => {
-    console.error('disconnect happened', msg);
-    sendErrorMessage(bot);
-});
-
-bot.on('error', async (err, id) => {
-    console.error('error happened', err, id);
-    sendErrorMessage(bot);
-});
-
-bot.on('shardDisconnect', async (err, id) => {
-    console.error('shardDisconnect happened', err, id);
-    sendErrorMessage(bot);
-});
+bot.on('error', console.error);
 
 // When a message is created
 bot.on('messageCreate', async (msg) => {
@@ -51,4 +30,4 @@ bot.on('messageCreate', async (msg) => {
     }
 });
 
-bot.connect(); // Get the bot to connect to Discord
+bot.connect(); // connect to Discord
