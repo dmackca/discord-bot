@@ -16,6 +16,9 @@ bot.on('messageCreate', async (msg) => {
 
     // frinkiac queries
     if (msg.content.startsWith('.frink ')) {
+        // add "loading" indicator reaction
+        msg.addReaction('⌛');
+
         const frinkiacQuery = msg.content.substring(7);
         console.log('got .frink query: "%s" in channel %s.', frinkiacQuery, msg.channel.id);
 
@@ -26,6 +29,9 @@ bot.on('messageCreate', async (msg) => {
         } catch (e) {
             console.error('no gif result found');
             msg.addReaction('🤷‍♀️');
+        } finally {
+            // remove "loading" indicator reaction
+            msg.removeReaction('⌛');
         }
     }
 });
