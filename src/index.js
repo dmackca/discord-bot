@@ -27,13 +27,34 @@ bot.on('messageCreate', async (msg) => {
             bot.createMessage(msg.channel.id, gifUrl);
             console.log('sent', gifUrl);
         } catch (e) {
-            console.error('no gif result found');
+            console.error('no frink gif result found for "%s"', frinkiacQuery);
             msg.addReaction('🤷‍♀️');
         } finally {
             // remove "loading" indicator reaction
             msg.removeReaction('⌛');
         }
     }
+    // temporary? add morbotron too
+    else if (msg.content.startsWith('.morbo ')) {
+        // add "loading" indicator reaction
+        msg.addReaction('🤖');
+
+        const morboQuery = msg.content.substring(7);
+        console.log('got .morbo query: "%s" in channel %s.', morboQuery, msg.channel.id);
+
+        try {
+            const gifUrl = await gifGenerator(morboQuery, 'morbotron');
+            bot.createMessage(msg.channel.id, gifUrl);
+            console.log('sent', gifUrl);
+        } catch (e) {
+            console.error('no morbo gif result found for "%s"', morboQuery);
+            msg.addReaction('🤷‍♀️');
+        } finally {
+            // remove "loading" indicator reaction
+            msg.removeReaction('🤖');
+        }
+    }
+
 });
 
 bot.connect(); // connect to Discord
