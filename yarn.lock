@@ -155,6 +155,13 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -732,15 +739,15 @@ flatted@^2.0.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
   integrity sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
 
-follow-redirects@^1.14.0:
+follow-redirects@^1.14.0, follow-redirects@^1.14.8:
   version "1.14.9"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
   integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
-frinkiac-gif-generator@^0.7.0:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/frinkiac-gif-generator/-/frinkiac-gif-generator-0.7.1.tgz#27cbc78d3b5dd2f6134fc8afd66708ef7b21bb44"
-  integrity sha512-In/21FU5thgEnf5gVAmmYHmllGQ4xyG4EX9l90D8Ua9ICwRVOOob2VLENd1AdECFpHFYBkGlP0FI7Q+TLApCyA==
+frinkiac-gif-generator@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/frinkiac-gif-generator/-/frinkiac-gif-generator-0.8.0.tgz#0ac208c09ec12deafd557d08deaded86f7cafdd0"
+  integrity sha512-qR3RSkZY/OBSa7NaUPvkFAaMzMmLRIEbAmjzJs3gGQo/DxdPWsXOEgKkgQdvtEbtZXAQMqp1Wa0Of1L6kuYwDA==
   dependencies:
     axios "^0.21.1"
     string-similarity "^3.0.0"
